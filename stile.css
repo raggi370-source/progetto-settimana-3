@@ -252,3 +252,20 @@ input:hover{
   background-color: #ff4d4d;
   color: white;
 }
+.barra {
+    background: #eee6d0;
+    border-radius: 10px;
+    height: 10px;
+    overflow: hidden;
+    max-width: 520px;
+    margin: 30px 0px 0px 0px;
+}
+
+#barra_riempita {
+    background: #d9a017;
+    height: 100%;
+    width: 0%;
+    transition: width 0.4s;
+    max-width: 520px;
+    margin: px;
+}

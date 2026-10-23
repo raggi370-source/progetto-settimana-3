@@ -33,13 +33,13 @@
 
 
 
-            
+
             <div class="form-group full-width">
                 <label>Nome servizio *</label>
                 <input type="text" placeholder="Es. Spotify Premium" id="nome_servizio">
             </div>
 
-            
+
             <div class="form-group">
                 <label>Categoria *</label>
                 <input type="text" placeholder="Streaming" id="categoria_servizio">
@@ -49,7 +49,7 @@
                 <input type="text" placeholder="9.99" id="prezzo_servizio">
             </div>
 
-            
+
             <div class="form-group">
                 <label>Prossimo rinnovo *</label>
                 <input type="date" id="rinnovo_servizio">
@@ -64,11 +64,11 @@
 
 
             <!-- Bottone aggiungi -->
-            <button type="submit" class="btn-aggiungi"  id="bottone_aggiungi">+ Aggiungi</button>
+            <button type="submit" class="btn-aggiungi" id="bottone_aggiungi">+ Aggiungi</button>
         </form>
     </div>
     <br>
-    
+
 
     <div id="quadrato2">
         <div>
@@ -77,29 +77,43 @@
 
         </div>
         <div id="riga_select">
-            <select>
-                <option value="tutti" id = "filtro1" >+ costoso</option>
-                <option value="prezzo>10" id = "filtro1" >prezzo>10</option>
-                <option value="prezzo>20" id = "filtro1" >prezzo>20</option>
-                <option value="prezzo>30" id = "filtro1" >prezzo>30</option>
+            <select id="selettore_filtro">
+                <option value="0">tutti</option>
+                <option value="10">prezzo>10</option>
+                <option value="20">prezzo>20</option>
+                <option value="30">prezzo>30</option>
             </select>
 
 
-             <select>
+            <select>
                 <option value="tutti">Tutti</option>
                 <option value="prezzo>10">prezzo>10</option>
                 <option value="prezzo>20">prezzo>20</option>
                 <option value="prezzo>30">prezzo>30</option>
             </select>
         </div>
-     
+
+
+
+
+        
+       <div id="riepilogo">
+    <div class="numeri">
+        <div><strong id="num_totale">0</strong> <span>Totale</span></div>
+        <div><strong id="num_attivi">0</strong> <span>Attivi</span></div>
+        <div><strong id="num_annullare">0</strong> <span>Da annullare</span></div>
     </div>
+
+    <div class="barra">
+        <div id="barra_riempita"></div>
+    </div>
+</div>
 
     <div id="lista_abbonamenti"></div>
 
 
 
-    
+
 </body>
 
 </html>
