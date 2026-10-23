@@ -1,4 +1,4 @@
-// Elementi della pagina che uso nel codice
+// collegamenti 
 const form = document.querySelector(".form-container");
 const lista = document.getElementById("lista_abbonamenti");
 const bottoneAggiungi = document.getElementById("bottone_aggiungi");
@@ -9,10 +9,23 @@ const bottoneTema = document.getElementById("colore_sfondo");
 
 let schedaDaModificare = null;
 
-// Cambia tra tema scuro e tema chiaro
+
+
+
+
+
+
+
+
+// Cambia sfondo
 bottoneTema?.addEventListener("click", () => {
   document.body.classList.toggle("light-mode");
 });
+
+
+
+
+
 
 // Aggiunge un abbonamento oppure salva le modifiche
 bottoneAggiungi?.addEventListener("click", (evento) => {
@@ -64,6 +77,14 @@ bottoneAggiungi?.addEventListener("click", (evento) => {
   aggiornaPagina();
 });
 
+
+
+
+
+
+
+
+
 // Crea un ID diverso per ogni abbonamento
 function creaId() {
   return `${Date.now()}-${Math.random().toString(16).slice(2)}`;
@@ -113,6 +134,16 @@ function mostraAbbonamento(scheda, abbonamento) {
   scheda.append(informazioni, azioni);
 }
 
+
+
+
+
+
+
+
+
+
+
 // Gestisce i pulsanti Modifica ed Elimina
 lista.addEventListener("click", (evento) => {
   const scheda = evento.target.closest(".listacreata");
@@ -126,7 +157,7 @@ lista.addEventListener("click", (evento) => {
     return;
   }
 
-  if (evento.target.closest(".btn-azione")) {
+  if (evento.target.closest(".btn-azione")) {/*non toccare non so perche ma ora funge*/
     document.getElementById("nome_servizio").value = scheda.dataset.nome;
     document.getElementById("categoria_servizio").value = scheda.dataset.categoria;
     document.getElementById("prezzo_servizio").value = scheda.dataset.prezzo;
@@ -138,6 +169,14 @@ lista.addEventListener("click", (evento) => {
     document.getElementById("nome_servizio").focus();
   }
 });
+
+
+
+
+
+
+
+
 
 // Aggiorna i risultati mentre scrivi e quando cambi un filtro
 function aggiornaRisultati() {
@@ -186,6 +225,10 @@ function aggiornaRisultati() {
   }
 }
 
+
+
+
+
 // Controlla il filtro scelto nel menu delle date
 function corrispondeAllaData(dataRinnovo, scelta, oggi) {
   if (scelta === "tutte") return true;
@@ -201,6 +244,13 @@ function corrispondeAllaData(dataRinnovo, scelta, oggi) {
   return true;
 }
 
+
+
+
+
+
+
+
 // Legge la data senza spostarla al giorno precedente
 function leggiData(testoData) {
   if (!testoData) return null;
@@ -212,6 +262,10 @@ function leggiData(testoData) {
 function inizioGiornata(data) {
   return new Date(data.getFullYear(), data.getMonth(), data.getDate());
 }
+
+
+
+
 
 // La ricerca si aggiorna mentre scrivi
 campoRicerca?.addEventListener("input", aggiornaPagina);
@@ -226,6 +280,11 @@ function aggiornaPagina() {
   aggiornaRiepilogo();
 }
 
+
+
+
+
+/*riepilogo*/
 function aggiornaRiepilogo() {
   const abbonamenti = [...document.querySelectorAll(".listacreata")];
 
@@ -239,12 +298,19 @@ function aggiornaRiepilogo() {
   document.getElementById("num_attivi").textContent = attivi;
   document.getElementById("num_annullare").textContent = daAnnullare;
 
+
+
+
+
   const percentuale = abbonamenti.length
     ? (attivi / abbonamenti.length) * 100
     : 0;
 
   document.getElementById("barra_riempita").style.width = `${percentuale}%`;
 }
+
+
+
 
 // Mostra un messaggio dopo un'azione
 function mostraMessaggio(testo) {
@@ -260,5 +326,5 @@ function mostraMessaggio(testo) {
   messaggio.textContent = testo;
 }
 
-// Aggiorna la pagina appena viene aperta
+// Aggiorna la pagina appena viene aperta 
 aggiornaPagina();

@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Exo+2:wght@300;400;600&display=swap');
+
+
+
 body {
 
     background-color: #0b0b0b;
@@ -8,6 +12,8 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+
+
 body.light-mode {
     background-color: white;
     color: black;
@@ -17,8 +23,47 @@ body.light-mode {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.sfondo {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+}
 
+#img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 75%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  opacity: 0.4;
+  z-index: -1;
+  pointer-events: none;
+}
+.partesopra{
+    max-width: 500;
+}
 
+.contenitore-immagine {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.partesopra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#quasi{
+    font-family: 'Orbitron', 'Arial Black', sans-serif;
+  background: #0a0e1a;
+  color: #e6f1ff;
+  
+  
+}
 
 #colore_sfondo {
     padding: 8px 12px;
