@@ -15,7 +15,7 @@
 
     <div class="contenitore-immagine">
         <!--<img alt="Sfondo" src ="Black_Hole_Desktop_&_Phone_Wallpapers_(SVS14146_-_BH_accretion_disk_viz_desktop).png" id="img">-->
-        <div>
+        <div class="partesopra">
             <h6>BENVENUTO</h6>
             <h1>UTENTE</h1>
             <button id="colore_sfondo">sfondo</button>
@@ -29,23 +29,27 @@
         <h2>Aggiungi Abbonamento</h2>
 
         <form class="form-container">
-            <!-- Riga 1: Intera larghezza -->
+
+
+
+
+            
             <div class="form-group full-width">
                 <label>Nome servizio *</label>
                 <input type="text" placeholder="Es. Spotify Premium" id="nome_servizio">
             </div>
 
-            <!-- Riga 2: Due colonne -->
+            
             <div class="form-group">
                 <label>Categoria *</label>
-                <input type="text" placeholder="Streaming" >
+                <input type="text" placeholder="Streaming" id="categoria_servizio">
             </div>
             <div class="form-group">
                 <label>Prezzo mensile (€) *</label>
                 <input type="text" placeholder="9.99" id="prezzo_servizio">
             </div>
 
-            <!-- Riga 3: Due colonne -->
+            
             <div class="form-group">
                 <label>Prossimo rinnovo *</label>
                 <input type="date" id="rinnovo_servizio">
@@ -55,11 +59,17 @@
                 <input type="text" placeholder="Conto principale" id="addebito_servizio">
             </div>
 
-            <!-- Bottone finale -->
+
+
+
+
+            <!-- Bottone aggiungi -->
             <button type="submit" class="btn-aggiungi"  id="bottone_aggiungi">+ Aggiungi</button>
         </form>
     </div>
     <br>
+    
+
     <div id="quadrato2">
         <div>
             <label class="filtro">Filtro</label><br>
@@ -68,10 +78,10 @@
         </div>
         <div id="riga_select">
             <select>
-                <option value="tutti">Tutti</option>
-                <option value="prezzo>10">prezzo>10</option>
-                <option value="prezzo>20">prezzo>20</option>
-                <option value="prezzo>30">prezzo>30</option>
+                <option value="tutti" id = "filtro1" >+ costoso</option>
+                <option value="prezzo>10" id = "filtro1" >prezzo>10</option>
+                <option value="prezzo>20" id = "filtro1" >prezzo>20</option>
+                <option value="prezzo>30" id = "filtro1" >prezzo>30</option>
             </select>
 
 
@@ -85,10 +95,11 @@
      
     </div>
 
+    <div id="lista_abbonamenti"></div>
 
 
 
-    <script src="java.js"></script>
+    
 </body>
 
 </html>

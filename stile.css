@@ -19,6 +19,7 @@ body.light-mode {
 
 
 
+
 #colore_sfondo {
     padding: 8px 12px;
     cursor: pointer;
@@ -181,4 +182,73 @@ input:hover{
 .filto{
     font-family: system-ui,
     -apple-system, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*creazione lista */
+
+.listacreata {
+  background-color: #121214; 
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 5px solid #ff9f43; 
+  
+}
+
+.titolo-servizio {
+  font-size: 16px;
+  color: #333333;
+}
+
+.sottotitolo-servizio {
+  font-size: 13px;
+  color: #777777;
+  margin-top: 4px;
+}
+
+.azioni-abbonamento {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.prezzo-tag {
+  font-weight: bold;
+  color: #ff9f43;
+  margin-right: 10px;
+}
+
+
+.btn-azione {
+  background-color: #f1f2f6;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #57606f;
+  transition: background 0.2s;
+}
+
+.btn-azione:hover {
+  background-color: #e4e7eb;
+}
+
+.btn-elimina:hover {
+  background-color: #ff4d4d;
+  color: white;
 }
