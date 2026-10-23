@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Subtrack Navigation</title>
+    <!-- Collega il tuo file CSS -->
+    <link rel="stylesheet" href="stile.css">
+    <script src="java.js" defer></script>
+</head>
+
+<body>
+
+
+
+    <div class="contenitore-immagine">
+        <!--<img alt="Sfondo" src ="Black_Hole_Desktop_&_Phone_Wallpapers_(SVS14146_-_BH_accretion_disk_viz_desktop).png" id="img">-->
+        <div>
+            <h6>BENVENUTO</h6>
+            <h1>UTENTE</h1>
+            <button id="colore_sfondo">sfondo</button>
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div id="quadrato">
+        <h2>Aggiungi Abbonamento</h2>
+
+        <form class="form-container">
+            <!-- Riga 1: Intera larghezza -->
+            <div class="form-group full-width">
+                <label>Nome servizio *</label>
+                <input type="text" placeholder="Es. Spotify Premium" id="nome_servizio">
+            </div>
+
+            <!-- Riga 2: Due colonne -->
+            <div class="form-group">
+                <label>Categoria *</label>
+                <input type="text" placeholder="Streaming" >
+            </div>
+            <div class="form-group">
+                <label>Prezzo mensile (€) *</label>
+                <input type="text" placeholder="9.99" id="prezzo_servizio">
+            </div>
+
+            <!-- Riga 3: Due colonne -->
+            <div class="form-group">
+                <label>Prossimo rinnovo *</label>
+                <input type="date" id="rinnovo_servizio">
+            </div>
+            <div class="form-group">
+                <label>Addebito su</label>
+                <input type="text" placeholder="Conto principale" id="addebito_servizio">
+            </div>
+
+            <!-- Bottone finale -->
+            <button type="submit" class="btn-aggiungi"  id="bottone_aggiungi">+ Aggiungi</button>
+        </form>
+    </div>
+    <br>
+    <div id="quadrato2">
+        <div>
+            <label class="filtro">Filtro</label><br>
+            <input type="text" id="ciao" placeholder="quale abbonamento stai cercando ?">
+
+        </div>
+        <div id="riga_select">
+            <select>
+                <option value="tutti">Tutti</option>
+                <option value="prezzo>10">prezzo>10</option>
+                <option value="prezzo>20">prezzo>20</option>
+                <option value="prezzo>30">prezzo>30</option>
+            </select>
+
+
+             <select>
+                <option value="tutti">Tutti</option>
+                <option value="prezzo>10">prezzo>10</option>
+                <option value="prezzo>20">prezzo>20</option>
+                <option value="prezzo>30">prezzo>30</option>
+            </select>
+        </div>
+     
+    </div>
+
+
+
+
+    <script src="java.js"></script>
+</body>
+
+</html>
